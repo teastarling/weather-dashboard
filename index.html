@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Document</title>
 </head>
 <body>
-    
+    <nav class="navbar navbar-light bg-info justify-content-center py-4">
+        <span class="navbar-brand mb-0"><h1>Weather Dashboard</h1></span>
+    </nav>
+
+    <h1 class="pl-3">Search for a City:</h1>
+    <form class="pl-3">
+        <div class="form-row">
+          <div class="form-group col-md-3 input-group-lg">
+            <input id="city-input" type="city" class="form-control" id="city-input" placeholder="New York">
+          </div>
+        </div>
+        <button id="search-btn" type="submit" class="btn btn-primary col-md-3">Search</button>
+      </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> 
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
