@@ -16,20 +16,24 @@
         <span class="navbar-brand mb-0"><h1>Weather Dashboard</h1></span>
     </nav>
 
-  
-    <h1 class="pl-3">Search for a City:</h1>
+  <main id="container" class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 justify-content-center">
+    <h1 class=" pl-3 align-self-center">Search for a City:</h1>
     <form class="pl-3">
         <div class="form-row">
-          <div class="form-group col-md-3 input-group-lg">
+          <div class="form-group input-group-lg col-md-12">
             <input id="city-input" type="city" class="form-control" id="city-input" placeholder="New York">
           </div>
         </div>
-        <button id="search-btn" type="submit" class="btn btn-primary col-md-3">Search</button>
+        <button id="search-btn" type="submit" class="btn btn-primary col-md-12">Search</button>
     </form>
+    </div>
 
-    <div class="jumbotron p-1 ml-2">
-      <h1 class="display-6">Atlanta Date Icon</h1>
-      <ul>
+  <div class="col-md-9">
+    <div class="jumbotron p-1 mt-2 ml-2">
+      <h1 class="display-6 ml-4">Atlanta Date Icon</h1>
+      <ul id="one-day-forecast">
         <li>Temp: 482949</li>
         <li>Wind: so fast</li>
         <li>Humidity: soggy</li>
@@ -38,7 +42,10 @@
     </div>
 
     <div class="row">
-      <div class="col-sm-2">
+    <h2 class="display-7 ml-4 pb-3">5-Day Forecast:</h2>
+    </div>
+    <div class="row">
+      <div class="col-2">
         <div class="card">
           <div class="card-body bg-dark text-white">
             <h5 class="card-title">Date</h5>
@@ -51,7 +58,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-2">
+      <div class="col-2">
         <div class="card">
           <div class="card-body bg-dark text-white">
             <h5 class="card-title">Date</h5>
@@ -64,7 +71,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-2">
+      <div class="col-2">
         <div class="card">
           <div class="card-body bg-dark text-white">
             <h5 class="card-title">Date</h5>
@@ -77,7 +84,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-2">
+      <div class="col-2">
         <div class="card">
           <div class="card-body bg-dark text-white">
             <h5 class="card-title">Date</h5>
@@ -90,7 +97,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-2">
+      <div class="col-2">
         <div class="card">
           <div class="card-body bg-dark text-white">
             <h5 class="card-title">Date</h5>
@@ -104,6 +111,9 @@
         </div>
       </div>
     </div>
+  </div>
+  </div>
+  </main>
 
 
       

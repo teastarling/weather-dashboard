@@ -1,0 +1,28 @@
+body {
+    width: 100%
+}
+
+li {
+    list-style-type: none;
+}
+
+.jumbotron {
+    border-style: solid;
+    border-radius: 0;
+}
+
+.card-text {
+    margin-left: -2.5rem;
+}
+
+.card-text li {
+    padding: 0.3rem;
+}
+
+#one-day-forecast {
+    margin-left: -1rem;
+}
+
+#one-day-forecast li {
+    padding: 0.5rem;
+}
