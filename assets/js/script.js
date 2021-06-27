@@ -17,8 +17,19 @@ function fiveDayUrl(event) {
         return response.json();
     })
     .then(function(data) {
-        console.log(data);
-    });
+        var lat = data.city.coord.lat;
+        var lon = data.city.coord.lon;
+
+        var oneCallUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=imperial&exclude=minutely,hourly&appid=427c72356bf2f2c7899a5613b020d43f"
+
+        fetch(oneCallUrl)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            console.log(data)
+        });
+    })
 
 
 }
