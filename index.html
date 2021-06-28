@@ -12,108 +12,52 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-light bg-info justify-content-center py-4">
+  <!-- Nav bar at top of screen -->
+    <nav class="navbar navbar-light bg-info justify-content-center py-0">
         <span class="navbar-brand mb-0"><h1>Weather Dashboard</h1></span>
     </nav>
-
-  <main id="container" class="container-fluid">
+<!-- main container around the entirety of the sit content -->
+<main id="container" class="container-fluid">
+  <!-- search input field and button -->
   <div class="row">
     <div class="col-md-3 justify-content-center">
-    <h1 class=" pl-3 align-self-center">Search for a City:</h1>
-    <form class="pl-3">
-        <div class="form-row">
-          <div class="form-group input-group-lg col-md-12">
-            <input id="city-input" type="city" class="form-control" id="city-input" placeholder="New York">
+      <h2 class=" pl-3 align-self-center">Search for a City:</h2>
+
+      <form class="pl-3">
+          <div class="form-row">
+            <div class="form-group input-group-lg col-md-12">
+              <input id="city-input" type="city" class="form-control" id="city-input" placeholder="New York">
+            </div>
           </div>
-        </div>
         <button id="search-btn" type="submit" class="btn btn-primary col-md-12">Search</button>
-    </form>
+      </form>
     </div>
-
-  <div class="col-md-9">
-    <div class="jumbotron p-1 mt-2 ml-2">
-      <h1 class="display-6 ml-4">Atlanta Date Icon</h1>
-      <ul id="one-day-forecast">
-        <li>Temp: 482949</li>
-        <li>Wind: so fast</li>
-        <li>Humidity: soggy</li>
-        <li>UV Index: no atmosphere left</li>
-      </ul>
-    </div>
-
-    <div class="row">
-    <h2 class="display-7 ml-4 pb-3">5-Day Forecast:</h2>
-    </div>
-    <div class="row">
-      <div class="col-2">
-        <div class="card">
-          <div class="card-body bg-dark text-white">
-            <h5 class="card-title">Date</h5>
-            <ul class="card-text">
-              <li>Icon</li>
-              <li>Temp: Bad</li>
-              <li>Wind: so much</li>
-              <li>Humidity: super bad</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-2">
-        <div class="card">
-          <div class="card-body bg-dark text-white">
-            <h5 class="card-title">Date</h5>
-            <ul class="card-text">
-              <li>Icon</li>
-              <li>Temp: Bad</li>
-              <li>Wind: so much</li>
-              <li>Humidity: super bad</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-2">
-        <div class="card">
-          <div class="card-body bg-dark text-white">
-            <h5 class="card-title">Date</h5>
-            <ul class="card-text">
-              <li>Icon</li>
-              <li>Temp: Bad</li>
-              <li>Wind: so much</li>
-              <li>Humidity: super bad</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-2">
-        <div class="card">
-          <div class="card-body bg-dark text-white">
-            <h5 class="card-title">Date</h5>
-            <ul class="card-text">
-              <li>Icon</li>
-              <li>Temp: Bad</li>
-              <li>Wind: so much</li>
-              <li>Humidity: super bad</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-2">
-        <div class="card">
-          <div class="card-body bg-dark text-white">
-            <h5 class="card-title">Date</h5>
-            <ul class="card-text">
-              <li>Icon</li>
-              <li>Temp: Bad</li>
-              <li>Wind: so much</li>
-              <li>Humidity: super bad</li>
-            </ul>
-          </div>
-        </div>
+    <!-- jumbotron displaying main "today" information for city entered -->
+    <div class="col-md-9">
+      <div class="jumbotron p-1 mt-2 ml-2">
+        <h1 class="display-6 ml-4">
+          <span id="city-header"></span>
+          <span id="date-header"></span>
+          <img id="icon-header"/>
+        </h1>
+        <ul id="one-day-forecast">
+        </ul>
       </div>
     </div>
   </div>
+<!-- element containing the buttons created from local storage -->
+  <div class="row">
+    <div class="col-md-3 justify-content-center">
+      <div id="storage-buttons"> 
+      </div>
+    </div>
+    <!-- element containing the dynamically generated 5-day forecast blocks -->
+    <div class="col-md-9">
+      <h2 class="display-7 ml-2 pb-3">5-Day Forecast:</h2>
+      <div id="card-blocks" class="row"></div>
+    </div>
   </div>
-  </main>
+</main>
 
 
       

@@ -13,10 +13,23 @@ li {
 
 .card-text {
     margin-left: -2.5rem;
+    font-size: medium;
 }
 
 .card-text li {
     padding: 0.3rem;
+}
+
+.uvi-low {
+    background-color: green;
+}
+
+.uvi-mid {
+    background-color: yellow;
+}
+
+.uvi-high {
+    background-color: red;
 }
 
 #one-day-forecast {
@@ -25,4 +38,8 @@ li {
 
 #one-day-forecast li {
     padding: 0.5rem;
+}
+
+#card-blocks {
+    margin-right: -12rem;
 }
