@@ -16,7 +16,8 @@ function onClick(event) {
 // function to run the weatherFetch function with the button value if button is clicked instead of search input
 function buttonCall(event) {
     event.preventDefault();
-    weatherFetch(this.value);
+    var search = event.target.innerText;
+    weatherFetch(search);
 }
 
 // first adds the input to the cityArray in local storage, then runs the fetch call with the cityInputVal (city name from input field or button) taking the place of the city name in the URL. From there takes in the latitude and longitude for that city, as well as the city name since this is not included in the next batch of info, and then runs another fetch using that lat and lon in order to fetch the onecall api which includes the UVI
@@ -57,7 +58,7 @@ function createTodayForecast(data) {
     var headerIconEl = document.getElementById("icon-header");
     var dataDate = data.daily[0].dt;
     var todayIcon = data.daily[0].weather[0].icon;
-    var headerImg = "https://openweathermap.org/img/wn/" + todayIcon + ".png";
+    var headerImg = "https://openweathermap.org/img/w/" + todayIcon + ".png";
     
     todayListEl.innerHTML = "";
 
@@ -96,7 +97,7 @@ function createTodayForecast(data) {
 function fiveDay(daily) {
     var dateUnix = daily.dt
     var dailyIcon = daily.weather[0].icon;
-    var dailyImg = "https://openweathermap.org/img/wn/" + dailyIcon + ".png";
+    var dailyImg = "https://openweathermap.org/img/w/" + dailyIcon + ".png";
 
     var resultCol = document.createElement('div');
     resultCol.classList.add('col-2');
@@ -119,7 +120,7 @@ function fiveDay(daily) {
     resultHead.append(resultUl);
 
     var resultIcon = document.createElement("img");
-    resultCol.setAttribute("src", dailyImg);
+    resultIcon.setAttribute("src", dailyImg);
 
     var tempLi = document.createElement('li');
     tempLi.textContent = "Temp: " + daily.temp.max + "°";
@@ -142,11 +143,11 @@ for (var i=0; i < cityArray.length; i++) {
 function createButton(cityName) {
     var button = document.createElement('button');
     button.classList.add("storagebtn", "btn", "btn-secondary", "col-md-12", "m-2");
-    button.setAttribute("value", cityName);
+    button.setAttribute("data-city", cityName);
     button.textContent = cityName;
     buttonList.append(button);
 }
 
 // click events corresponding to search button and local storage buttons 
 searchButtonEl.addEventListener('click', onClick);
-document.querySelector(".storagebtn").addEventListener('click', buttonCall);
+buttonList.addEventListener('click', buttonCall);
